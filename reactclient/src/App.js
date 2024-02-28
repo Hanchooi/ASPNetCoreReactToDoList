@@ -124,6 +124,8 @@ export default function App() {
     const index = tasksCopy.findIndex((tasksCopyTask, currentIndex) => {
       if (tasksCopyTask.taskId === updatedTask.taskId) {
         return true;
+      } else {
+        return false;
       }
     });
 
@@ -142,6 +144,8 @@ export default function App() {
     const index = tasksCopy.findIndex((tasksCopyTask, currentIndex) => {
       if (tasksCopyTask.taskId === deletedTaskTaskId) {
         return true;
+      } else {
+        return false;
       }
     });
 
