@@ -1,0 +1,30 @@
+const API_BASE_URL_DEVELOPMENT = 'https://localhost:7265';
+const API_BASE_URL_PRODUCTION = 'https://aspnetcorereacttodolist.azurewebsites.net';
+
+const ENDPOINTS = {
+    GET_ALL_TASKS: 'get-all-tasks',
+    GET_TASK_BY_ID: 'get-task-by-id',
+    CREATE_TASK: 'create-task',
+    UPDATE_TASK: 'update-task',
+    DELETE_TASK_BY_ID: 'delete-task-by-id'
+};
+
+const development = {
+    API_URL_GET_ALL_TASKS: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.GET_ALL_TASKS}`,
+    API_URL_GET_TASK_BY_ID: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.GET_TASK_BY_ID}`,
+    API_URL_CREATE_TASK: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.CREATE_TASK}`,
+    API_URL_UPDATE_TASK: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.UPDATE_TASK}`,
+    API_URL_DELETE_TASK_BY_ID: `${API_BASE_URL_DEVELOPMENT}/${ENDPOINTS.DELETE_TASK_BY_ID}`
+};
+
+const production = {
+    API_URL_GET_ALL_TASKS: `${API_BASE_URL_PRODUCTION}/${ENDPOINTS.GET_ALL_TASKS}`,
+    API_URL_GET_TASK_BY_ID: `${API_BASE_URL_PRODUCTION}/${ENDPOINTS.GET_TASK_BY_ID}`,
+    API_URL_CREATE_TASK: `${API_BASE_URL_PRODUCTION}/${ENDPOINTS.CREATE_TASK}`,
+    API_URL_UPDATE_TASK: `${API_BASE_URL_PRODUCTION}/${ENDPOINTS.UPDATE_TASK}`,
+    API_URL_DELETE_TASK_BY_ID: `${API_BASE_URL_PRODUCTION}/${ENDPOINTS.DELETE_TASK_BY_ID}`
+};
+
+const Constants = process.env.NODE_ENV === 'development' ? development : production;
+
+export default Constants;
