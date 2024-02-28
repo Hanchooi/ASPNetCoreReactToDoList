@@ -13,7 +13,7 @@ builder.Services.AddCors(options =>
             builder
             .AllowAnyMethod()
             .AllowAnyHeader()
-            .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
+            .WithOrigins("http://localhost:3000", "https://icy-sky-06ba09400.4.azurestaticapps.net");
         });
 });
 
